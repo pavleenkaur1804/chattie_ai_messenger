@@ -7,3 +7,14 @@ interface Message {
         avatar: string
     }
 }
+
+interface ChatCompletionRequestMessage {
+    role: "user" | "system";
+    content: string;
+}
+
+interface QueryResponse  {
+    status: number,
+    message: string,
+    error: boolean,
+}
