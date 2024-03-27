@@ -46,11 +46,9 @@ const notification = toast.loading('Your solution is being processed!')
                 prompt: input, chatId, model, session
             })
         }).then((response)=>{
-       console.log('data ffrom fetch', response)
            toast.success('Success Response', {
                 id:notification,
             })
-            toast.error(response.statusText)
             //  Toast notification to say loading
         }).catch((err)=> toast.error(err))
     }
