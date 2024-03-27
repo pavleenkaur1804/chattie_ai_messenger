@@ -8,7 +8,7 @@ import { db } from "../firebase";
 import { useCollection } from "react-firebase-hooks/firestore"
 
 type Props = {
-    id: String;
+    id: string;
 }
 
 function ChatRow({ id }: Props) {
@@ -19,7 +19,7 @@ function ChatRow({ id }: Props) {
     const [active, setActive] = useState(false);
 
     const [messages] = useCollection(
-        collection(db, "users", session?.user?.email, "chats", id.toString(), "messages"),
+        collection(db, "users", session?.user?.email, "chats", id, "messages"),
     )
 
     useEffect(() => {
